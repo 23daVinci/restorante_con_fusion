@@ -27,7 +27,7 @@ class NavbarComponent extends Component {
                     <div className="container">
                         <NavbarToggler onClick={ this.ToggelNav } />
                         <NavbarBrand className="mr-auto" href="/">
-                            <img src="assets/images/logo.png" width="40" height="51" alt="REstorante Con Fusion" />
+                            <img src="assets/images/logo.png" width="40" height="51" alt="Restorante Con Fusion" />
                         </NavbarBrand>
                         <Collapse isOpen={ this.state.isNavOpen    } navbar>
                             <Nav navbar>

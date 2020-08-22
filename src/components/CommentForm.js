@@ -27,7 +27,8 @@ class CommentForm extends Component {
 
     handleLogin(values) {
         this.ToggelModal(); // close the modal
-        alert('Current State is: ' + JSON.stringify(values));
+        alert('Thank You ' + values.author + '! Your comment was added successfully');
+        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
     }
 
     render() {
@@ -53,7 +54,7 @@ class CommentForm extends Component {
                             </Row>
                             <Row className="form-group">
                                 <Label htmlFor="yourName">Your Name</Label>
-                                <Control.text model=".name" id="name" name="name"
+                                <Control.text model=".author" id="name" name="name"
                                     placeholder="Your Name"
                                     className="form-control"
                                     validators={{
@@ -73,12 +74,12 @@ class CommentForm extends Component {
                             </Row>
                             <Row className="form-group">
                                 <Label htmlFor="comment" md={2}>Comment</Label>
-                                <Control.textarea model=".message" id="message" name="message"
+                                <Control.textarea model=".comment" id="message" name="message"
                                     rows="12"
                                     className="form-control">
                                 </Control.textarea>
                             </Row>
-                            <Button type="submit" value="submit" color="primary">Login</Button>
+                            <Button type="submit" value="submit" color="primary">Post</Button>
                         </LocalForm>
                     </ModalBody>
                 </Modal>

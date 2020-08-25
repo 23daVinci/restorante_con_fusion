@@ -28,7 +28,7 @@ class CommentForm extends Component {
     handleLogin(values) {
         this.ToggelModal(); // close the modal
         alert('Thank You ' + values.author + '! Your comment was added successfully');
-        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
+        this.props.postComment(this.props.dishId, values.rating, values.author, values.comment);
     }
 
     render() {
